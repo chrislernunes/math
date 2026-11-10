@@ -1,2 +1,7 @@
-receipt_math.js linguist-generated
-docs/** linguist-documentation
+*.ml linguist-language=OCaml
+*.mli linguist-language=OCaml
+*.ml linguist-detectable=true
+*.mli linguist-detectable=true
+receipt_math.js linguist-generated=true
+docs/index.html linguist-documentation=true
+docs/samples/* linguist-documentation=true
