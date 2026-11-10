@@ -1,7 +1,2 @@
-# Ignore generated output
-receipt_math.js linguist-generated=true
-docs/samples/*.png linguist-generated=true
-
-# Force primary language
-*.ml linguist-language=OCaml
-*.mli linguist-language=OCaml
+receipt_math.js linguist-generated
+docs/** linguist-documentation
