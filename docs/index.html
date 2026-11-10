@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>math</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { background: #fff; color: #111; }
+    body {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 56px 24px 120px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    header { margin-bottom: 72px; }
+    h1 { font-size: 14px; font-weight: 500; letter-spacing: 0.03em; }
+    .sub { margin-top: 6px; font-size: 12px; color: #777; }
+    .item { margin-bottom: 80px; }
+    .eq { white-space: pre-wrap; margin-bottom: 14px; color: #1a1a1a; }
+    img {
+      width: 100%;
+      max-width: 512px;
+      height: auto;
+      display: block;
+      image-rendering: pixelated;
+      border: 1px solid #e5e5e5;
+    }
+    footer { margin-top: 96px; font-size: 11px; color: #999; }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>math</h1>
+    <p class="sub">25 samples</p>
+  </header>
+  <main id="gallery"></main>
+  <footer>
+    <a href="../index.html">live generator</a>
+  </footer>
+  <script>
+    const samples = [{"eq": "(Or\n  (MirrorX\n    (Mul (Cos Y) (C 0.206)))\n  (Sub Y (Mod (Xor X Y) (Cos X))))\nScale: 2\nNumeric: float\nGradient: linear", "img": "samples/sample-01.png"}, {"eq": "(Mod\n  (Mod (Mod X Y)\n    (MirrorX\n      (Add X (C 0.805))))\n  (Mod X (MirrorX (And X Y))))\nScale: 2\nNumeric: float\nGradient: linear", "img": "samples/sample-02.png"}, {"eq": "(x | 103) ^ x | y\nScale: 0\nNumeric: int\nGradient: cos", "img": "samples/sample-03.png"}, {"eq": "x * (mirrorY(95 ^ y) * x)\nScale: 0\nNumeric: int\nGradient: linear", "img": "samples/sample-04.png"}, {"eq": "(Mul (C 0.893)\n  (Add\n    (MirrorX\n      (Mod (C 0.072) Y))\n    (And (And X Y)\n      (C 0.882))))\nScale: 2\nNumeric: float\nGradient: linear", "img": "samples/sample-05.png"}, {"eq": "x % y % ((y ^ x) + (x + x)) % mirrorX(y - 203)\nScale: 2\nNumeric: int\nGradient: linear", "img": "samples/sample-06.png"}, {"eq": "(mirrorX(255 * y) & x) + (x % y | mirrorX(y)) * ((65 & y) * y)\nScale: 0\nNumeric: int\nGradient: linear", "img": "samples/sample-07.png"}, {"eq": "y ^ mirrorY((43 ^ x) & y % 189)\nScale: 2\nNumeric: int\nGradient: cos", "img": "samples/sample-08.png"}, {"eq": "mirrorY((x + 192) % ((y - 195) * mirrorY(x)))\nScale: 1\nNumeric: int\nGradient: linear", "img": "samples/sample-09.png"}, {"eq": "y - (y + y * x)\nScale: 0\nNumeric: int\nGradient: cos", "img": "samples/sample-10.png"}, {"eq": "52 + ((y ^ x) + x % y) % (x | 161)\nScale: 1\nNumeric: int\nGradient: sqrt", "img": "samples/sample-11.png"}, {"eq": "(Xor\n  (Add\n    (Or (MirrorY X)\n      (C 0.595))\n    (Sin (Xor Y (C 0.802))))\n  Y)\nScale: 1\nNumeric: float\nGradient: linear", "img": "samples/sample-12.png"}, {"eq": "(Or (C 3.825E-09)\n  (Mod (C 0.175)\n    (Add (Mod X (C 0.423))\n      Y)))\nScale: 2\nNumeric: float\nGradient: sin", "img": "samples/sample-13.png"}, {"eq": "mirrorY(mirrorY(mirrorX(y)) - (y % 112 & x))\nScale: 1\nNumeric: int\nGradient: sin", "img": "samples/sample-14.png"}, {"eq": "((x & (103 & y)) + x) * ((y + x ^ mirrorY(x)) - y)\nScale: 0\nNumeric: int\nGradient: sqrt", "img": "samples/sample-15.png"}, {"eq": "(185 * y & 154) + (mirrorX(y) & 37) & (x | y % 126) % (76 ^ (x ^ y))\nScale: 0\nNumeric: int\nGradient: linear", "img": "samples/sample-16.png"}, {"eq": "mirrorX(y * x % (128 * (y ^ 226)))\nScale: 2\nNumeric: int\nGradient: cos", "img": "samples/sample-17.png"}, {"eq": "y % (x ^ y) % 121 ^ 158\nScale: 0\nNumeric: int\nGradient: sin", "img": "samples/sample-18.png"}, {"eq": "mirrorX(0 - x + mirrorY(y * y))\nScale: 1\nNumeric: int\nGradient: linear", "img": "samples/sample-19.png"}, {"eq": "(Mod (MirrorX Y)\n  (Add\n    (Or (Add Y (C 0.800))\n      (Xor X Y))\n    X))\nScale: 1\nNumeric: float\nGradient: linear", "img": "samples/sample-20.png"}, {"eq": "188 ^ x + (14 & x & y + y)\nScale: 1\nNumeric: int\nGradient: linear", "img": "samples/sample-21.png"}, {"eq": "(MirrorY\n  (Sub\n    (Mod (C 0.691)\n      (Xor (C 0.905) Y))\n    (And (Add (C 1) X)\n      (Or Y (C 0.843)))))\nScale: 2\nNumeric: float\nGradient: linear", "img": "samples/sample-22.png"}, {"eq": "(3 - y & x + x) * (x * x + 48) ^ (mirrorY(x) | y + y | mirrorX(230 ^ y))\nScale: 1\nNumeric: int\nGradient: cos", "img": "samples/sample-23.png"}, {"eq": "(Mod\n  (MirrorY\n    (Add (Or Y X)\n      (Mul X (C 0.578))))\n  (C 0.208))\nScale: 2\nNumeric: float\nGradient: sin", "img": "samples/sample-24.png"}, {"eq": "(y & 228) * (53 * mirrorY(x)) & 68\nScale: 1\nNumeric: int\nGradient: linear", "img": "samples/sample-25.png"}];
+    const gallery = document.getElementById("gallery");
+    samples.forEach(s => {
+      const div = document.createElement("div");
+      div.className = "item";
+      const pre = document.createElement("pre");
+      pre.className = "eq";
+      pre.textContent = s.eq;
+      const img = document.createElement("img");
+      img.src = s.img;
+      img.alt = "";
+      div.appendChild(pre);
+      div.appendChild(img);
+      gallery.appendChild(div);
+    });
+  </script>
+</body>
+</html>
