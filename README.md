@@ -2,7 +2,13 @@
 
 Generative mathematical expression art.
 
-- **Live generator**: open `index.html`
-- **Gallery**: open `docs/index.html` (25 samples)
+Open `index.html` for the live generator.  
+Gallery of 25 samples: `docs/index.html`.
 
-GitHub Pages can be enabled from the `/docs` folder.
+## Run
+
+Serve the directory or open `index.html` in a browser.
+
+## Pages
+
+Enable GitHub Pages from the `/docs` folder (Settings → Pages → Branch `main` / `/docs`).
